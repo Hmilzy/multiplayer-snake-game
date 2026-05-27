@@ -32,7 +32,7 @@ class PlayerStats {
         if (!amountToIncrease) {
             amountToIncrease = 1;
         }
-        this.score = amountToIncrease;
+        this.score += amountToIncrease;
         if (this.score > this.highScore) {
             this.highScore = this.score;
         }

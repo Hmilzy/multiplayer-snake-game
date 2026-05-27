@@ -126,7 +126,7 @@ class PlayerService {
                 } else {
                     this.playerStatBoard.addKill(killReport.killerId);
                     this.playerStatBoard.increaseScore(killReport.killerId);
-                    this.playerStatBoard.stealScore(victim.id, killReport.killerId);
+                    this.playerStatBoard.stealScore(killReport.killerId, victim.id);
                     // Steal victim's length
                     this.playerContainer.getPlayer(killReport.killerId).grow(victim.getSegments().length);
                     const killer = this.playerContainer.getPlayer(killReport.killerId);
