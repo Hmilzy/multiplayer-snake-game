@@ -54,9 +54,8 @@ export default class GameView {
     }
 
     showKillMessage(killerName, victimName, killerColor, victimColor, victimLength) {
-        this.setKillMessageWithTimer(`<span style='color: ${killerColor}'>${killerName}</span> killed ` +
-            `<span style='color: ${victimColor}'>${victimName}</span>` +
-            ` and grew by <span style='color: ${killerColor}'>${victimLength}</span>`);
+        this.setKillMessageWithTimer(`<span style='color: ${victimColor}'>${killerName}</span> killed ` +
+            `<span style='color: ${killerColor}'>${victimName}</span>`);
     }
 
     showKilledEachOtherMessage(victimSummaries) {

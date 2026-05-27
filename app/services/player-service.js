@@ -128,10 +128,10 @@ class PlayerService {
                     this.playerStatBoard.increaseScore(killReport.killerId);
                     this.playerStatBoard.stealScore(killReport.killerId, victim.id);
                     // Steal victim's length
-                    this.playerContainer.getPlayer(killReport.killerId).grow(victim.getSegments().length);
                     const killer = this.playerContainer.getPlayer(killReport.killerId);
-                    this.notificationService.broadcastKill(killer.name, victim.name, killer.color, victim.color,
-                        victim.getSegments().length);
+                    killer.grow(killer.getSegments().length);
+                    this.notificationService.broadcastKill(killer.name, victim.name, victim.color, killer.color,
+                        killer.getSegments().length);
                     this.notificationService.notifyPlayerMadeAKill(killReport.killerId);
                 }
                 this.boardOccupancyService.removePlayerOccupancy(victim.id, victim.getSegments());

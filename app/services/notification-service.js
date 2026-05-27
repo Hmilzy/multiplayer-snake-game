@@ -61,7 +61,7 @@ class NotificationService {
     notifyPlayerFoodCollected(playerId, text, coordinate, color, isSwap) {
         const playerSocket = this.sockets.connected[playerId];
         if (playerSocket) {
-            playerSocket.emit(ServerConfig.IO.OUTGOING.NOTIFICATION.FOOD_COLLECTED, text, coordinate, color, isSwap);
+            playerSocket.emit(ServerConfig.IO.OUTGOING.NOTIFICATION.FOOD_COLLECTED, text, color, coordinate, isSwap);
         }
     }
 }
