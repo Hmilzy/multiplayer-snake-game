@@ -27,7 +27,7 @@ class FoodService {
         for (const foodConsumed of foodsConsumed) {
             const playerWhoConsumedFood = playerContainer.getPlayer(foodConsumed.playerId);
             const food = this.food[foodConsumed.foodId];
-            playerWhoConsumedFood.grow(ServerConfig.FOOD[food.type].GROWTH);
+            playerWhoConsumedFood.grow(0);
             const points = ServerConfig.FOOD[food.type].POINTS;
             this.playerStatBoard.increaseScore(playerWhoConsumedFood.id, points);
 
